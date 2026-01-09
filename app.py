@@ -37,7 +37,7 @@ if archivos_subidos:
                 df['VALOR HORA'] = pd.to_numeric(df['VALOR HORA'], errors='coerce')
                 
                 if df['CEDULA'].isnull().any() or df['VALOR HORA'].isnull().any():
-                    st.warning(f"⚠️ **{archivo.name}**: Tiene datos no numéricos en Cédula o Valor Hora. Se procede a consolidar el resto de registros")
+                    st.warning(f"⚠️ **{archivo.name}**: Tiene datos no numéricos en Cédula o Valor Hora. Se procede a consolidar el resto de registros.")
                 
                 # Agregar a la lista para consolidar (solo las columnas que nos interesan)
                 lista_df.append(df[COLUMNAS_REQUERIDAS])
